@@ -70,6 +70,7 @@ public class ArrayDeque<T> {
         if (size == capacity) {
             grow();
         }
+
         array[last] = item;
         last = plusOne(last);
         size++;
@@ -92,7 +93,7 @@ public class ArrayDeque<T> {
     }
 
     public T removeFirst() {
-        if (size <= capacity / 4) {
+        if (size <= capacity / 4 && capacity > 32) {
             shrink();
         }
         if (size != 0) {
@@ -105,7 +106,7 @@ public class ArrayDeque<T> {
         }
     }
     public T removeLast() {
-        if (size <= capacity / 4) {
+        if (size <= capacity / 4 && capacity > 32) {
             shrink();
         }
         if (size != 0) {

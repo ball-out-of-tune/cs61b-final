@@ -58,5 +58,15 @@ public class ArrayDequeTset {
 //        assertFalse(isEmpty3);
         assertTrue(isEmpty3);
     }
-
+    @Test
+    public void test() {
+        ArrayDeque<Integer> arrayDeque = new ArrayDeque<>();
+        arrayDeque.addLast(0);
+        int i = arrayDeque.removeFirst();
+        assertEquals(0, i);
+        arrayDeque.addLast(2);
+        int j = arrayDeque.removeFirst();
+        assertEquals(2, j);
+        arrayDeque.addLast(4);
+    }
 }
