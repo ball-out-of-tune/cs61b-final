@@ -25,6 +25,12 @@ public class TestPalindrome {
         assertTrue(palindrome.isPalindrome(s1));
         String s2 = "wjodaiso";
         assertFalse(palindrome.isPalindrome(s2));
+        String s3 = "";
+        assertTrue(palindrome.isPalindrome(s3));
+        String s4 = "e";
+        assertTrue(palindrome.isPalindrome(s4));
+        String s5 = "32";
+        assertFalse(palindrome.isPalindrome(s5));
     }
 
     @Test
