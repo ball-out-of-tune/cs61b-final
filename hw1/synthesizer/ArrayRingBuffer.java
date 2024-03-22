@@ -1,4 +1,5 @@
-package synthesizer;// TODO: Make sure to make this class a part of the synthesizer package
+package synthesizer;
+// TODO: Make sure to make this class a part of the synthesizer package
 // package <package name>;
 import java.util.Iterator;
 
@@ -32,7 +33,7 @@ public class ArrayRingBuffer<T> extends AbstractBoundedQueue<T> {
     /**
     * when first == last, make them both at 0.
     */
-    public void wrapAround() {
+    private void wrapAround() {
         first = 0;
         last = 0;
     }
@@ -81,7 +82,7 @@ public class ArrayRingBuffer<T> extends AbstractBoundedQueue<T> {
         if (!isEmpty()) {
             return rb[first];
         } else {
-            return null;
+            throw new RuntimeException("Ring Buffer Underflow");
         }
     }
 
